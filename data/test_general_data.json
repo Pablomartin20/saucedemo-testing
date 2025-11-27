@@ -1,0 +1,36 @@
+{
+  "urls": {
+    "base_url": "https://www.saucedemo.com/",
+    "inventory_url": "https://www.saucedemo.com/inventory.html",
+    "inventory_item_url": "https://www.saucedemo.com/inventory-item.html?id=",
+    "cart_url": "https://www.saucedemo.com/cart.html"
+  },
+  "valid_users": [
+    {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    }
+  ],
+  "locked_users": [
+    {
+      "username": "locked_out_user",
+      "password": "secret_sauce"
+    }
+  ],
+  "unregistered_users": [
+    {
+      "username": "asdasdasdasd",
+      "password": "asdasdasdasd"
+    }
+  ],
+  "error_messages": {
+    "locked_user": "Epic sadface: Sorry, this user has been locked out.",
+    "invalid_user": "Epic sadface: Username and password do not match any user in this service",
+    "no_user": "Epic sadface: Username is required",
+    "no_password": "Epic sadface: Password is required",
+    "inventory": "Epic sadface: You can only access '/inventory.html' when you are logged in.",
+    "inventory_item": "Epic sadface: You can only access '/inventory-item.html' when you are logged in.",
+    "cart": "Epic sadface: You can only access '/cart.html' when you are logged in.",
+    "not_found": "ITEM NOT FOUND"
+  }
+}
