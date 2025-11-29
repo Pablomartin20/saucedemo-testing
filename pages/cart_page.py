@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from utils.waits import is_visible, visible_and_contains_text
 from utils.texts import float_price, float_item_subtotal, float_tax, float_cart_total
 from utils.numbers import round_up
+from selenium.webdriver.common.action_chains import ActionChains
 
 class CartPage:
   def __init__(self, driver):
@@ -42,7 +43,9 @@ class CartPage:
   
   def click_inventory_item(self, item):
     products = self.driver.find_elements(By.XPATH, "//div[@data-test='inventory-item-description']//a")
-    products[item].click()
+    product = products[item]
+
+    ActionChains(self.driver).move_to_element(product).click().perform()
   
   def get_product_price(self, item):
     items = self.driver.find_elements(By.XPATH, "//div[@data-test='inventory-item-price']")
